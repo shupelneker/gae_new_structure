@@ -84,6 +84,9 @@ class LogVisit(ndb.Model):
     ip = ndb.StringProperty()
     timestamp = ndb.StringProperty()
 
+class ConfigSite(ndb.Model):
+    name = ndb.KeyProperty
+    value = ndb.StringProperty()
 
 class LogEmail(ndb.Model):
     sender = ndb.StringProperty(
