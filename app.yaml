@@ -61,15 +61,15 @@ handlers:
   static_files: boilerplate/static/img/\1
   upload: boilerplate/static/img/(.*\.(gif|png|jpg))
 
-- url: /img/(.*\.(gif|png|jpg|jpeg))
-  static_files: bp_content/themes/default/static/img/\1
-  upload: bp_content/themes/default/static/img/(.*\.(gif|png|jpg|jpeg))
+- url: /img/(.*)/(.*\.(gif|png|jpg|jpeg))
+  static_files: bp_content/themes/\1/static/img/\2
+  upload: bp_content/themes/\1/static/img/(.*\.(gif|png|jpg|jpeg))
 
-- url: /css/(.*\.(gif|png|jpg|jpeg))
-  static_files: bp_content/themes/default/static/css/\1
+- url: /css/(.*)/(.*\.(gif|png|jpg|jpeg))
+  static_files: bp_content/themes/\1/static/css/\2
   upload: bp_content/themes/default/static/css/(.*\.(gif|png|jpg|jpeg))
 
-- url: /css
+- url: /css/
   mime_type: text/css
   static_dir: bp_content/themes/default/static/css
 
